@@ -1,0 +1,77 @@
+#img {
+    overflow: hidden;
+    width: 500px;
+    height: 200px;
+    position: relative;
+}
+
+#img:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img {
+    width: 100%;
+    margin: 10px auto;
+    animation: ani 2s linear;
+}
+
+.slider {
+    position: relative;
+    width: 500px;
+    margin: auto;
+}
+
+.leftArrow {
+    border: solid;
+    border-width: 10px 20px 10px 0;
+    border-color: transparent #fff transparent transparent;
+    width: 20px;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.rightArrow {
+    border: 1px solid red;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #fff;
+    width: 20px;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    cursor: pointer;
+}
+
+.Arrow {
+    visibility: hidden;
+}
+
+.slider:hover .Arrow {
+    visibility: visible;
+    transition: 2s;
+}
+
+.content {
+    position: absolute;
+    right: -100%;
+    top: 30%;
+}
+
+@keyframes ani {
+    0% {
+        transform: scale(1.2);
+    }
+    ;
+    100% {
+        transform: scale(1);
+    }
+    ;
+}
